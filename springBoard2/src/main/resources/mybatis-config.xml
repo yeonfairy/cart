@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd" >
+<configuration>
+	<settings>
+		<setting name="jdbcTypeForNull" value="NULL"/>
+	</settings>
+	
+	<typeAliases> <!-- DB 컬럼명과 JAVA에서 처리하는변수가 일치하지 않기 떄문에 ALIAS로 매칭시켜주었다.  -->
+		<typeAlias type="com.spring.board.member.model.vo.Member" alias="Member" />
+		<typeAlias type="com.spring.board.board.model.vo.Board" alias="Board" />
+		<typeAlias type="com.spring.board.product.model.vo.ProductVO" alias="ProductVO"/>
+		<typeAlias type="com.spring.board.product.model.vo.CartVO" alias="CartVO"/>
+	</typeAliases>
+	
+	<mappers>
+		<mapper resource="mapper/member-mapper.xml"/>
+		<mapper resource="mapper/board-mapper.xml" />
+		<mapper resource="mapper/product-mapper.xml" />
+		<mapper resource="mapper/cart-mapper.xml" />
+	</mappers>
+</configuration>
