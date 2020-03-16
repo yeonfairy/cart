@@ -1,5 +1,10 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<%@ page import="java.io.File" %>
+<%@ page import="java.io.*"%>
+<%@ page import="java.net.URLEncoder"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -63,8 +68,7 @@ tr:nth-child(5) td {
 	src="https://cdn.jsdelivr.net/npm/summernote@0.8.16/dist/summernote.min.js"></script>
 </head>
 <body>
-<%@ include file="../include/header.jsp" %>
-<%@ include file="../include/menu.jsp" %>
+
 	<div id="container">
 		<h2>글쓰기</h2>
 		<form action="boardInsert.do" method="post"
@@ -97,7 +101,8 @@ tr:nth-child(5) td {
 				<tr>
 					<td colspan="2">
 						<button id="saveAll">저장</button>
-						<button type="button" onclick="location.href='board.do'">취소</button>
+						<button type="reset">취소</button>
+						<button type="button" onclick="location.href='board.do'">목록</button>
 					</td>
 				</tr>
 			</table>

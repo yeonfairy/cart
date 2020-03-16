@@ -63,9 +63,11 @@ tr:nth-child(6) td {
                 <tr><td>제목</td><td><input type="text" name="subject" /></td></tr>
                 <tr><td>내용</td>
                   <td><textarea id ="summernote" name="content"></textarea></td></tr>
-                <tr><td colspan="2" style="text-align:right;"><input type="submit" value="보내기"/></td></tr>
+               <td colspan="2">
+               <input type="submit" value="보내기"/>
+               <button type="button" onclick="location.href='board.do'">목록</button>
+               </td>
             </table>
-            	<button type="button" onclick="location.href='board.do'">목록</button>
         </form>
     </div>
 </body>
