@@ -17,18 +17,20 @@ body {
 
 /* Style the tab */
 .in {
-	display : inline-block;
-	width: 60%;
-	border :1px solid #ccc;
+	display: inline-block;
+	margin-left: auto;
+	margin-right: auto;
+	border: 1px solid #ccc;
 	hegith: 100px;
 }
+
 .tab {
-    width :100%;
-    text-align : center;
-    margin : 15px;
-	overflow: hidden;
+	width: 100%; text-align : center;
+	margin: 10px; overflow : hidden;
 	border: 1px solid #ccc;
 	background-color: #f1f1f1;
+	overflow: hidden;
+	text-align: center;
 }
 
 /* Style the buttons inside the tab */
@@ -38,11 +40,11 @@ body {
 	border: none;
 	outline: none;
 	cursor: pointer;
-	padding: 14px 16px;
+	padding: 9px 12px;
 	transition: 0.3s;
 	font-size: 17px;
 	text-align: center;
-	width: 300px;
+	width: 100px;
 	margin-left: auto;
 	margin-right: auto;
 }
@@ -67,24 +69,28 @@ body {
 	margin-right: auto;
 	text-align: center;
 	width: 300px;
-
 }
 </style>
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+<%@ include file="../include/header.jsp"%>
 </head>
 <body>
-	<%@ include file="../include/header.jsp"%>
 	<%@ include file="../include/menu.jsp"%>
 	<h2>프로젝트</h2>
 	<p>년도를 선택후, 아래 탭을 클릭해주세요:</p>
 	<div class="tab">
-	<div class="in">
-		<button class="tablinks" onclick="openCity(event, '2012')">2012년</button>
-		<button class="tablinks" onclick="openCity(event, '2013')">2013년</button>
-		<button class="tablinks" onclick="openCity(event, '2014')">2014년</button>
-	</div>
+		<div class="in">
+			<button class="tablinks" onclick="openCity(event, '<<')"> << </button>			
+			<button class="tablinks" onclick="openCity(event, '2012')">2012년</button>
+			<button class="tablinks" onclick="openCity(event, '2013')">2013년</button>
+			<button class="tablinks" onclick="openCity(event, '2014')">2014년</button>
+			<button class="tablinks" onclick="openCity(event, '>>')"> >> </button>	
+						<c:if test="${msg == 'success' }">
+			<button type="tablinks" onclick="location.href='${path}/write.do'">+</button>			
+			</c:if>		
+		</div>
 	</div>
 
 	<div id="2012" class="tabcontent">

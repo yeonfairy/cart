@@ -32,19 +32,19 @@
 </script>
 </head>
 <body>
-	<h2>**년도 등록</h2>
+	<h2>프로젝트 새탭 등록</h2>
 	<form action="" id="form1" name="form1" enctype="multipart/form-data" method="post">
 		<table border="1">
 			<tr>
-				<td>탭 **년도</td>
+				<td>프로젝트 년도 :</td>
 				<td><input type="text" name="productName" id="productName"></td>
 			</tr>
 			<tr>
-				<td>탭 **년도 설명</td>
+				<td>프로젝트 설명 :</td>
 				<td><textarea rows="5" cols="60" name="productDesc" id="productDesc"></textarea></td>
 			</tr>
 			<tr>
-				<td>**년도 이미지 첨부</td>
+				<td>프로젝트 이미지 첨부</td>
 				<td><input type="file" name="productPhoto" id="productPhoto"></td>
 			</tr>
 			<tr>

@@ -16,6 +16,12 @@ public class AdminController {
 	
 	@Inject
 	AdminService adminService;
+	//0. 프로젝트 페이지 매핑
+	// 1. 관리자  로그인페이지 매핑
+	@RequestMapping("project.do")
+	public String project(){
+		return "board/adminHome";
+	}
 	
 	// 1. 관리자  로그인페이지 매핑
 	@RequestMapping("login.do")
