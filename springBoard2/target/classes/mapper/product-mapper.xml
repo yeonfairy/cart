@@ -23,14 +23,21 @@
 		product_price AS productPrice,
 		product_desc AS productDesc,
 		product_url AS productUrl
-		FROM tbl_product
+		FROM test.tbl_product
 		WHERE product_id = #{productId}
 	</select>
 	<!-- 03. 상품 추가하기 -->
-	<insert id="insertProduct">
-		INSERT INTO tbl_product
+	<insert id="insertProduct" parameterType="ProductVO">
+		INSERT INTO test.tbl_product
+        (
+		  product_id
+		, product_name
+		, product_price
+		, product_desc
+		, product_url
+		)
 		VALUES (
-		seq_product.NEXTVAL
+		seq_product_id.NEXTVAL
 		, #{productName}
 		, #{productPrice}
 		, #{productDesc}
@@ -40,7 +47,7 @@
 
 	<!-- 04. 상품 수정/편집하기 -->
 	<update id="updateProduct">
-		UPDATE tbl_product
+		UPDATE test.tbl_product
 		SET product_name = #{productName}
 		, product_price = #{productPrice}
 		, product_desc = #{productDesc}
@@ -51,7 +58,7 @@
 
 	<!-- 05. 상품 레코드 삭제처리 -->
 	<delete id="deleteProduct">
-		DELETE FROM tbl_product
+		DELETE FROM test.tbl_product
 		WHERE product_id =
 		#{productId}
 	</delete>
@@ -60,7 +67,7 @@
 	<select id="fileInfo" resultType="String">
 		SELECT product_url AS
 		productUrl
-		FROM tbl_product
+		FROM test.tbl_product
 		WHERE product_id = #{productId}
 	</select>
 </mapper>

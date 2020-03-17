@@ -52,8 +52,7 @@ tr:nth-child(6) td {
 <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.16/dist/summernote.min.js"></script>
 </head>
 <body>
-<%@ include file="../include/header.jsp" %>
-<%@ include file="../include/menu.jsp" %>
+
 <div id="container">
         <form action="sendMail.do" method="post">
             <table>

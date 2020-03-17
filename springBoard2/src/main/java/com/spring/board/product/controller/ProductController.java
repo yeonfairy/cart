@@ -63,6 +63,7 @@ public class ProductController {
 			vo.setProductUrl(filename);
 			productService.insertProduct(vo);
 		}
+		
 		return "redirect:list.do";
 	}
 	

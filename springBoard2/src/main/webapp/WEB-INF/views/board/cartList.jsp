@@ -9,13 +9,12 @@
 	$(document).ready(function(){
 		// 리스트 페이지로 이동
 		$("#btnList").click(function(){
-			location.href="${path}/board/list.do";
+			location.href="${path}/cart/list.do";
 		});
 	});
 </script>
 </head>
 <body>
-<%@ include file="../include/header.jsp" %>
 <%@ include file="../include/menu.jsp" %>
 	<h2>장바구니 확인</h2>
 	<c:choose>

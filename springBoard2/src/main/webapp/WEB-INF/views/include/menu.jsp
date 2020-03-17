@@ -8,7 +8,7 @@
 <a href="${path}/sendMailForm.do">문의사항 메일 보내기</a> |
 <!-- 관리자 권한일 경우 -->
 <c:if test="${sessionScope.adminId != null }">
-<a href="${path}/write.do">상품등록</a> |
+<a href="${path}/write.do">년도(탭)등록</a> |
 </c:if>
 
 <c:choose>
@@ -17,8 +17,8 @@
 		<a href="${path}/admin/login.do">관리자 로그인</a>
 	</c:when>
 	<c:otherwise>
-		${sessionScope.userName}님이 로그인중입니다.
-		<a href="${path}/logout.do">로그아웃</a> |
+		관리자(${sessionScope.userName})님이 로그인중입니다.
+		<a href="${path}/admin/logout.do">로그아웃</a> |
 	</c:otherwise>
 </c:choose>	
 <hr>

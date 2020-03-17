@@ -101,7 +101,7 @@ tr:nth-child(5) td {
 				<tr>
 					<td colspan="2">
 						<button id="saveAll">저장</button>
-						<button type="reset">취소</button>
+						<button type="button" onclick="location.href='board.do'">취소</button>
 						<button type="button" onclick="location.href='board.do'">목록</button>
 					</td>
 				</tr>

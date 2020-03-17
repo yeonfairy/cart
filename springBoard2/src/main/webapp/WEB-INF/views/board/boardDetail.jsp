@@ -47,8 +47,7 @@
 <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.16/dist/summernote.min.js"></script>
 </head>
 <body>
-<%@ include file="../include/header.jsp" %>
-<%@ include file="../include/menu.jsp" %>
+
 <div id="container">
 <h2>세부사항 조회</h2>
       <section id="container">

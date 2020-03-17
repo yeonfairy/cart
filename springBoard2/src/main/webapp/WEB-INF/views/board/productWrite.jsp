@@ -15,16 +15,13 @@
 			var productPhoto = $("#productPhoto").val();
 			
 			if(productName == "") {
-				alert("상품명을 입력해주세요");
+				alert("탭 년도를 입력해주세요");
 				productName.foucs();
-			} else if (productPrice == "") {
-				alert("상품 가격을 입력해주세요");
-				productPrice.focus();
 			} else if (productDesc == "") {
-				alert("상품 설명을 입력해주세요");
+				alert("탭 년도 설명을 입력해주세요");
 				productDesc.focus();
 			} else if (productPhoto == "") {
-				alert("상품 사진을 입력해주세요");
+				alert("년도 관련 첨부 사진을 입력해주세요");
 				productPhoto.focus();
 			}
 			document.form1.action = "${path}/insert.do";
@@ -35,23 +32,19 @@
 </script>
 </head>
 <body>
-	<h2>상품 등록</h2>
+	<h2>**년도 등록</h2>
 	<form action="" id="form1" name="form1" enctype="multipart/form-data" method="post">
 		<table border="1">
 			<tr>
-				<td>상품명</td>
+				<td>탭 **년도</td>
 				<td><input type="text" name="productName" id="productName"></td>
 			</tr>
 			<tr>
-				<td>가격</td>
-				<td><input type="text" name="productPrice" id="productPrice"></td>
-			</tr>
-			<tr>
-				<td>상품설명</td>
+				<td>탭 **년도 설명</td>
 				<td><textarea rows="5" cols="60" name="productDesc" id="productDesc"></textarea></td>
 			</tr>
 			<tr>
-				<td>상품이미지</td>
+				<td>**년도 이미지 첨부</td>
 				<td><input type="file" name="productPhoto" id="productPhoto"></td>
 			</tr>
 			<tr>

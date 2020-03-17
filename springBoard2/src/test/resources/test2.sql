@@ -114,6 +114,11 @@ user_id VARCHAR2(50) NOT NULL,
 product_id NUMBER NOT NULL,
 amount NUMBER DEFAULT 0 
 );
+
+--create product table
+CREATE SEQUENCE test.tbl_product START WITH 10 INCREMENT BY 1;
+COMMIT;
+
 --create cart table
 CREATE SEQUENCE test.seq_cart START WITH 10 INCREMENT BY 1;
 COMMIT;
@@ -121,3 +126,17 @@ COMMIT;
 ALTER TABLE test.tbl_cart ADD CONSTRAINT cart_userid_fk FOREIGN KEY(user_id) REFERENCES tbl_member(user_id);
 ALTER TABLE test.tbl_cart ADD CONSTRAINT cart_product_fk FOREIGN KEY(product_id) REFERENCES tbl_product(product_id);
 commit;
+
+--ADMIN PAGE
+CREATE TABLE test.tbl_admin (
+user_id VARCHAR2(50) NOT NULL 
+, user_pw VARCHAR(50) NOT NULL
+, USER_name VARCHAR(50) NOT NULL
+, user_email VARCHAR(100)
+, user_regdate DATE DEFAULT SYSDATE
+, USER_updatedate DATE DEFAULT SYSDATE
+, PRIMARY KEY(user_id)
+);
+
+commit;
+
