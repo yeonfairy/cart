@@ -6,6 +6,7 @@
 <a href="${path}/list.do">상품목록</a> |
 <a href="${path}/cart/list.do">장바구니</a> |
 <a href="${path}/sendMailForm.do">문의사항 메일 보내기</a> |
+<a href="${path}/admin/loginCheck.do">프로젝트</a> |
 <!-- 관리자 권한일 경우 -->
 <c:if test="${sessionScope.adminId != null }">
 <a href="${path}/write.do">년도(탭)등록</a> |
