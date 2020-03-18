@@ -12,7 +12,6 @@ import org.springframework.web.servlet.ModelAndView;
 import com.spring.board.product.model.vo.ProductVO;
 import com.spring.board.product.model.service.ProductService;
 @Controller
-
 public class ProductController {
 	@Inject
 	ProductService productService;

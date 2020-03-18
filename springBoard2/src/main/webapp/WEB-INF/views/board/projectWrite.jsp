@@ -1,7 +1,4 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
-<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -31,7 +28,7 @@
 </head>
 <body>
 	<h2>프로젝트 새탭 등록</h2>
-	<input type="hidden" id="PROJECT_ID" name="PROJECT_ID" value="">
+	<form action="" id="form1" name="form1" enctype="multipart/form-data" method="post">
 		<table border="1">
 			<tr>
 				<td>프로젝트 년도 :</td>

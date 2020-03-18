@@ -2,7 +2,7 @@
 <!-- jstl 코어 태그 -->
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <a href="${path}/list.do">상품목록</a> |
-<a href="${path}/write.do">상품등록</a> |
+<a href="${path}/projectWrite.do">년도 새탭 등록</a> |
 <c:choose>
 	<c:when test="${sessionScope.adminId == null}">
 		<a href="${path}/admin/login.do">관리자 로그인</a>

@@ -9,7 +9,7 @@
 <a href="${path}/admin/project.do">프로젝트</a> |
 <!-- 관리자 권한일 경우 -->
 <c:if test="${sessionScope.adminId != null }">
-<a href="${path}/write.do">년도(탭)등록</a> |
+<a href="${path}/projectWrite.do">년도 새탭등록</a> |
 </c:if>
 
 <c:choose>
