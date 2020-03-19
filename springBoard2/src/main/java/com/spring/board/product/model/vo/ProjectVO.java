@@ -4,8 +4,13 @@ public class ProjectVO {
 	private int projectId; // 상품번호
 	private String projectName; // 상품이름
 	private String projectDesc; // 상품 상세정보
+	private String createDate;
 	
-	
+	@Override
+	public String toString() {
+		return "ProjectVO [projectId=" + projectId + ", projectName=" + projectName + ", projectDesc=" + projectDesc
+				+ ", createDate=" + createDate + "]";
+	}
 	public int getProjectId() {
 		return projectId;
 	}
@@ -24,10 +29,10 @@ public class ProjectVO {
 	public void setProjectDesc(String projectDesc) {
 		this.projectDesc = projectDesc;
 	}
-	@Override
-	public String toString() {
-		return "ProjectVO [projectId=" + projectId + ", projectName=" + projectName + ", projectDesc=" + projectDesc
-				+ "]";
+	public String getCreateDate() {
+		return createDate;
 	}
-
+	public void setCreateDate(String createDate) {
+		this.createDate = createDate;
+	}
 }

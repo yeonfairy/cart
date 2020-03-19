@@ -1,18 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="projectMapper">
-	<resultMap type="ProjectVO" id="projectResultSet">
-		<id property="projectId" column="PROJECT_ID" />
-		<result property="projectName" column="PROJECT_NAME" />
-		<result property="projectDesc" column="PROJECT_DESC" />
-	</resultMap>
-	
-		<select id="selectProjectList" resultMap="projectResultSet">
-	SELECT * FROM  TEST.PROJECT_TB ORDER BY PROJECT_ID DESC 
+  	<!-- 01.프로젝트 리스트 보기 -->
+		<select id="listProject" resultType="ProjectVO">
+		select
+		project_id AS projectId,
+		project_name AS projectName,
+		project_desc AS projectDesc,
+		create_date AS createDate
+		FROM
+		TEST.PROJECT_TB
+		ORDER BY PROJECT_NAME ASC 
 	</select>
-  
+  	<!-- 02.프로젝트 탭 보기 -->
 	<insert id="insertProjectTab" parameterType="ProjectVO">
 		INSERT INTO TEST.PROJECT_TB VALUES( SEQ_PROJECT.NEXTVAL, #{ projectName }, #{ projectDesc }, DEFAULT )
 	</insert>
-	
+		<!-- 03.프로젝트 상세보기 -->
+	<select id="detailProject" resultType="ProjectVO">
+		select
+		project_id AS projectId,
+		project_name AS projectName,
+		project_desc AS projectDesc,
+		create_date AS createDate
+		FROM TEST.PROJECT_TB
+    	WHERE project_id = #{projectId}
+	</select>
 	</mapper>

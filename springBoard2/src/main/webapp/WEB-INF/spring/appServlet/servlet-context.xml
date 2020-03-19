@@ -51,7 +51,17 @@
     	<beans:property name="order" value="0"/>
     </beans:bean>
    
-
+	<!-- 인터셉터 bean 설정 -->
+	<!-- 관리자 세션체크 bean -->
+	<beans:bean id="adminInterceptor" class="com.spring.board.member.interceptor.AdminInterceptor"/>
+	<!-- 인터셉터 매핑정보 -->
+	<interceptors>
+		<!-- 관리자 세션체크 매핑-->
+		<interceptor>
+			<mapping path="/projectWrite.do"/>
+			<beans:ref bean="adminInterceptor"/>
+		</interceptor>
+	</interceptors>
 
 </beans:beans>
 

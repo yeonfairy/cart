@@ -6,6 +6,7 @@
 <%@ page import="java.net.URLEncoder"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -15,13 +16,16 @@ body {
 	font-family: Arial;
 }
 
+td, td {
+	font-size: 145%;
+}
 /* Style the tab */
 .in {
 	display: inline-block;
 	margin-left: auto;
 	margin-right: auto;
 	border: 1px solid #ccc;
-	hegith: 100px;
+	heigth: 100px;
 }
 
 .tab {
@@ -121,7 +125,6 @@ a:hover {
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
-<link rel="stylesheet" href="css/style.css">
 <!-- Fonts -->
 <link rel="stylesheet" type="text/css"
 	href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -130,7 +133,6 @@ a:hover {
 <body>
 	<%@ include file="../include/menu.jsp"%>
 	<div class="container">
-		<input type="hidden" name="projectId" value="${project.projectId}">
 		<div class="row">
 			<div class="col-sm-12 text-center">
 				<h2>
@@ -141,11 +143,11 @@ a:hover {
 			</div>
 		</div>
 		<div class="row">
-			<div class="col-sm-12 product-tabs">
+			<div class="col-sm-30 product-tabs">
 				<ul class="nav nav-tabs">
 					<li><a class="previous-button" role="button"><i
 							class="fa fa-angle-left fa-2x fa-fw"></i></a></li>
-					<li class="active"><a href="#tab1" data-toggle="tab">2012년</a></li>
+					<li class="active"><a href="#tab1" data-toggle="tab">2012년 </a></li>
 					<li class=""><a href="#tab2" data-toggle="tab">2013년</a></li>
 					<li class=""><a href="#tab3" data-toggle="tab">2014년</a></li>
 					<li class=""><a href="#tab4" data-toggle="tab">2015년</a></li>
@@ -153,10 +155,14 @@ a:hover {
 					<li class=""><a href="#tab6" data-toggle="tab">2017년</a></li>
 					<li class=""><a href="#tab7" data-toggle="tab">2018년</a></li>
 					<li class=""><a href="#tab8" data-toggle="tab">2019년</a></li>
-					<li class=""><a href="#tab9" data-toggle="tab">${ project.projectName }</a></li>
+					<c:forEach var="row" items="${list}">
+					<li class=""><a href="#tab9" data-toggle="tab">${row.projectName}</a></li>
+					<input type="hidden" id="projectId" name="projectId" value=${ row.projectId }> 
+					</c:forEach>							
 					<div class="tab-control">
-						<c:if test="${msg == 'success' }">
-							<button type="tablinks" style="background-color: #4caff0; 	padding: 2px 7px;"
+						<c:if test="${sessionScope.adminId != null }">
+							<button type="tablinks"
+								style="background-color: #4caff0; padding: 2px 7px;"
 								onclick="location.href='${path}/projectWrite.do'">+등록</button>
 						</c:if>
 						<a class="next-button" role="button"><i
@@ -224,9 +230,16 @@ a:hover {
 						<h4>VP 페이트러스 웹사이트</h4>
 						<h4>코오롱 베니트 웹사이트</h4>
 					</div>
-						<div class="tab-pane" id="tab9">
-						<h4>${ project.projectName }</h4>
-						<h4>${ project.projectDesc }</h4>
+					<div class="tab-pane" id="tab9">
+							<h4>
+								<c:forEach var="row" items="${list}">
+								<% pageContext.setAttribute("newLineChar", ","); %>
+								${fn:replace(row.projectDesc, newLineChar, "<br/>")}							
+							</c:forEach>
+							</h4>	
+							<c:forEach var="row" items="${list}">
+						<a href="${path}/admin/detail/${row.projectId}">00
+						</a></c:forEach>							
 					</div>
 				</div>
 			</div>
@@ -245,7 +258,8 @@ a:hover {
 
 		$('.previous-button').click(function() {
 			$('.nav-tabs > .active').prev('li').find('a').trigger('click');
-		})
-	</script>
+		});
+
+</script>
 </body>
 </html>

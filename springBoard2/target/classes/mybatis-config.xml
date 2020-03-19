@@ -9,7 +9,7 @@
 		<typeAlias type="com.spring.board.member.model.vo.Member" alias="Member" />
 		<typeAlias type="com.spring.board.board.model.vo.Board" alias="Board" />
 		<typeAlias type="com.spring.board.product.model.vo.ProductVO" alias="ProductVO"/>
-		<typeAlias type="com.spring.board.product.model.vo.ProductVO" alias="ProjectVO"/>		
+		<typeAlias type="com.spring.board.product.model.vo.ProjectVO" alias="ProjectVO"/>		
 		<typeAlias type="com.spring.board.product.model.vo.CartVO" alias="CartVO"/>
 		<typeAlias type="com.spring.board.member.model.vo.MemberVO" alias="MemberVO"/>
 	</typeAliases>

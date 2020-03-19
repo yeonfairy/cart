@@ -1,30 +1,31 @@
 package com.spring.board.product.model.dao;
 
-import java.util.ArrayList;
+import java.util.List;
 
-import org.mybatis.spring.SqlSessionTemplate;
-import org.springframework.beans.factory.annotation.Autowired;
+import javax.inject.Inject;
+
+import org.apache.ibatis.session.SqlSession;
 import org.springframework.stereotype.Repository;
 
-import com.spring.board.board.model.vo.Board;
+import com.spring.board.product.model.vo.ProductVO;
 import com.spring.board.product.model.vo.ProjectVO;
 
 @Repository("pDao")
 public class ProjectDao {
 
-	@Autowired
-	private SqlSessionTemplate sqlSession;
+	@Inject
+	SqlSession sqlSession;
 
-	public ArrayList<ProjectVO> selectProjectList() {
-		return (ArrayList)sqlSession.selectList("projectMapper.selectProjectList");
-	}
 	//프로젝트 등록
 	public int insertProjectTab(ProjectVO vo) {
 		return sqlSession.insert("projectMapper.insertProjectTab", vo);
 	}
-	//프로젝트 조회
-	//게시판 조회
-	public ProjectVO selectProjectOne(int projectId) {
-		return sqlSession.selectOne("projectMapper.selectProjectOne", projectId);
+	// 01. 상품목록
+	public List<ProjectVO> listProject() {
+		return sqlSession.selectList("projectMapper.listProject");
+	}
+	// 02. 프로젝트 상세
+	public ProjectVO detailProject(int projectId) {
+		return sqlSession.selectOne("projectMapper.detailProject", projectId);
 	}
 }
