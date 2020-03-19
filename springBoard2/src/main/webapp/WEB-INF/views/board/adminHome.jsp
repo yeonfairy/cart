@@ -238,7 +238,7 @@ a:hover {
 							</c:forEach>
 							</h4>	
 							<c:forEach var="row" items="${list}">
-						<a href="${path}/admin/detail/${row.projectId}">00
+						<a href="${path}/admin/detail/${row.projectId}">
 						</a></c:forEach>							
 					</div>
 				</div>
