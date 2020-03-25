@@ -136,8 +136,8 @@ a:hover {
 		<div class="row">
 			<div class="col-sm-12 text-center">
 				<h2>
-					프로젝트 <br /> <small> <br /> (주) 누리앱은 WEB, MOBILE, DB 분야
-						SI/SM 전문기업입니다. </br> 최고수준의 기술력 습득을 위해 노력하며 최상의 기술력을 제공함을 자부합니다.
+					프로젝트 <br /> <small> <br />  WEB, MOBILE, DB 분야
+						SI/SM. </br> 최고수준의 기술력 습득을 위해 노력하며 최상의 기술력을 제공함을 자부합니다.
 					</small>
 				</h2>
 			</div>

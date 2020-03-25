@@ -70,13 +70,8 @@
 		<tr>
 			<td colspan="4">
 				<textarea readonly id ="summernote" name = "editordata"> ${ board.boardContent }
-				<img src = "https://images.freeimages.com/images/premium/previews/3809/38096216-cartoon-little-teddy-bear.jpg" />
-				</br></br>
-				<div class="form-group" style="border: 1px solid #dbdbdb;">
-					<c:forEach var="file" items="${file}">
-					${ file.ORG_FILE_NAME }
-					</c:forEach>
-				</div>
+		
+
 				 </textarea>
 			</td>
 		</tr>	

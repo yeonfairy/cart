@@ -3,7 +3,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <a href="${path}/board.do">게시판</a> |
 <a href="${path}/insertForm.do">글쓰기</a> |
-<a href="${path}/list.do">상품목록</a> |
+<a href="${path}/shop/product/list.do">상품목록</a> |
 <a href="${path}/cart/list.do">장바구니</a> |
 <a href="${path}/sendMailForm.do">문의사항 메일 보내기</a> |
 <a href="${path}/admin/project.do">프로젝트</a> |

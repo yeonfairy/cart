@@ -27,21 +27,14 @@
 		WHERE product_id = #{productId}
 	</select>
 	<!-- 03. 상품 추가하기 -->
-	<insert id="insertProduct" parameterType="ProductVO">
-		INSERT INTO test.tbl_product
-        (
-		  product_id
-		, product_name
-		, product_price
-		, product_desc
-		, product_url
-		)
+	<insert id="insertProduct">
+		INSERT INTO test.tbl_product 
 		VALUES (
-		seq_product_id.NEXTVAL
-		, #{productName}
-		, #{productPrice}
-		, #{productDesc}
-		, #{productUrl}
+			seq_product.NEXTVAL
+			, #{productName}
+			, #{productPrice}
+			, #{productDesc}
+			, #{productUrl}
 		)
 	</insert>
 

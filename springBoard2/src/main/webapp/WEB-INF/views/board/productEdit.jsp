@@ -4,6 +4,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>상품 상세/삭제</title>
+<%@ include file="../include/header.jsp" %>
 <script>
 	$(document).ready(function(){
 		$("#editBtn").click(function(){
@@ -25,23 +26,22 @@
 				alert("상품 사진을 입력해주세요");
 				productPhoto.focus();
 			} */
-			document.form1.action = "${path}/update.do";
+			document.form1.action = "${path}/shop/product/update.do";
 			document.form1.submit();
 		});
 		$("#deleteBtn").click(function(){
 			if(confirm("상품을 삭제하시겠습니까?")){
-				document.form1.action = "${path}/delete.do";
+				document.form1.action = "${path}/shop/product/delete.do";
 				document.form1.submit();
 			}
 		});
 		$("#listBtn").click(function(){
-			location.href = "${path}/list.do";	
+			location.href = "${path}/shop/product/list.do";	
 		});
 	});
 </script>
 </head>
 <body>
-<%@ include file="../include/header.jsp" %>
 <%@ include file="../include/menu.jsp" %>
 	<h2>상품 정보/삭제</h2>
 	<form action="" id="form1" name="form1" enctype="multipart/form-data" method="post">

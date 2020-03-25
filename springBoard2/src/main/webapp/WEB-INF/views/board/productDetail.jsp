@@ -5,9 +5,9 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>상품 상세정보</title>
 <%@ include file="../include/header.jsp" %>
-<%@ include file="../include/menu.jsp" %>
 </head>
 <body>
+<%@ include file="../include/menu.jsp" %>
 	<h2>상품 상세정보</h2>
 	<table border="1">
 		<tr>
@@ -30,7 +30,7 @@
 					</tr>
 					<tr align="center">
 						<td colspan="2">
-							<form name="form1" method="post" action="${path}/insert.do">
+							<form name="form1" method="post" action="${path}/shop/cart/insert.do">
 								<input type="hidden" name="productId" value="${vo.productId}">
 								<select name="amount">
 									<c:forEach begin="1" end="10" var="i">
@@ -39,7 +39,7 @@
 								</select>&nbsp;개
 								<input type="submit" value="장바구니에 담기">
 							</form>
-							<a href="${path}/list.do">상품목록</a>
+							<a href="${path}/shop/product/list.do">상품목록</a>
 						</td>
 					</tr>
 				</table>
