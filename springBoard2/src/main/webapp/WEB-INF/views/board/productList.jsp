@@ -5,6 +5,8 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>상품 리스트</title>
 <%@ include file="../include/header.jsp" %>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+ <link href="<c:url value="/css/bootstrap.min.css" />" rel="stylesheet">
 <script>
 	$(document).ready(function(){
 		$("#btnAdd").click(function(){

@@ -6,70 +6,6 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>관리자 로그인페이지</title>
 <%@ include file="../include/header.jsp"%>
-<style>
-.input_row {
-    font-family:Georgia, "Malgun Gothic", serif;
-}
-h1, h2 {
-    font-weight: bold;
-	text-align: center;
-    font-family:Georgia, "Malgun Gothic", serif;
-    color : #a9a4a4;
-}
-h3 {
-    font-weight: bold;
-	text-align: center;
-	color : #a9a4a4;
-}
-.btn_global {
-	display: block;
-	width: 100%;
-	height: 61px;
-	margin: 30px 0 14px;
-	padding-top: 1px;
-	border: none;
-	border-radius: 0;
-	background-color: #ef8f21;
-	cursor: pointer;
-	text-align: center;
-	color: #fff;
-	font-size: 20px;
-	font-weight: 700;
-	line-height: 61px;
-	-webkit-appearance: none;
-}
-
-#header {
-	position: relative;
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
-	height: 168px;
-	padding: 62px 0 0;
-}
-
-.input_row {
-	position: relative;
-	height: 29px;
-	margin: 0 0 14px;
-	padding: 10px 35px 10px 15px;
-	border: solid 1px #dadada;
-	background: #fff;
-}
-
-#container {
-	width: 300px;
-	text-align: center;
-	margin: 100px auto;
-}
-
-.input_row.focus {
-	border: solid 1px #ef8f21;
-}
-body {
-background-color : #f7f5f5;
-}
-</style>
 <script>
 	$(document).ready(function() {
 		$("#btnLogin").click(function() {
@@ -118,6 +54,7 @@ background-color : #f7f5f5;
 				<td><input type="password" name="userPw" id="userPw"
 					class="input_row"></td>
 			</tr>
+			</br>
 			<tr>
 				<td colspan="2" align="center">
 					<button type="button" id="btnLogin" class="btn_global">로그인</button>

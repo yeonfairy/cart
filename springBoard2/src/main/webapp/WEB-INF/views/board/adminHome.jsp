@@ -11,125 +11,12 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<style>
-body {
-	font-family: Arial;
-}
-
-td, td {
-	font-size: 145%;
-}
-/* Style the tab */
-.in {
-	display: inline-block;
-	margin-left: auto;
-	margin-right: auto;
-	border: 1px solid #ccc;
-	heigth: 100px;
-}
-
-.tab {
-	width: 80%;
-	text-align: center;
-	margin: 10px;
-	overflow: hidden;
-	border: 1px solid #ccc;
-	background-color: #f1f1f1;
-	overflow: hidden;
-	padding: 9px 12px;
-}
-
-/* Style the buttons inside the tab */
-.tab button {
-	background-color: inherit;
-	float: center;
-	border: none;
-	outline: none;
-	cursor: pointer;
-	padding: 9px 12px;
-	transition: 0.3s;
-	font-size: 17px;
-	text-align: center;
-	width: 100px;
-	margin-left: auto;
-	margin-right: auto;
-}
-
-/* Change background color of buttons on hover */
-.tab button:hover {
-	background-color: #ddd;
-}
-
-/* Create an active/current tablink class */
-.tab button.active {
-	background-color: #ccc;
-}
-
-/* Style the tab content */
-.tabcontent {
-	display: none;
-	padding: 10px 20px;
-	border: 1px solid #ccc;
-	border-top: none;
-	margin-left: auto;
-	margin-right: auto;
-	text-align: center;
-	width: 200px;
-}
-
-h2 {
-	text-align: center;
-	padding: 8px 16px;
-}
-
-p {
-	text-align: center;
-	margin: 20px 0px;
-}
-
-a {
-	text-decoration: none;
-	display: inline-block;
-	padding: 8px 16px;
-}
-
-a:hover {
-	background-color: #ddd;
-	color: black;
-}
-
-.previous {
-	background-color: #f1f1f1;
-	color: black;
-	border-radius: 5px;
-}
-
-.next {
-	background-color: #4caff0;
-	color: white;
-	border-radius: 5px;
-}
-
-.tab-pane {
-	padding: 8px 300px;
-}
-
-.tab-control .previous-button {
-	left: 10%;
-}
-
-.tab-control .next-button {
-	right: 10%;
-}
-</style>
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-<link rel="stylesheet"
-	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
 <!-- Fonts -->
-<link rel="stylesheet" type="text/css"
-	href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="<c:url value="/css/bootstrap.min.css" />" rel="stylesheet">
 <%@ include file="../include/header.jsp"%>
 </head>
+
 <body>
 	<%@ include file="../include/menu.jsp"%>
 	<div class="container">

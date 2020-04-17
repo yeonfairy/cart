@@ -5,6 +5,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>상품장바구니 목록</title>
 <%@ include file="../include/header.jsp" %>
+ <link href="<c:url value="/css/bootstrap.min.css" />" rel="stylesheet">
 <script>
 	$(document).ready(function(){
 		// 리스트 페이지로 이동

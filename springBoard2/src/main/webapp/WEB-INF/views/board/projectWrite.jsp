@@ -4,14 +4,6 @@
 <html>
 <head>
 <style>
-#header {
-	position: relative;
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
-	height: 168px;
-	padding: 62px 0 0;
-}
 
 #container {
 	width: 300px;
@@ -20,7 +12,6 @@
 }
 
 body {
-	background-color: #f7f5f5;
 	text-align: center;
 }
 

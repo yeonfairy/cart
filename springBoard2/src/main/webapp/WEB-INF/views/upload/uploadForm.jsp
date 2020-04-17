@@ -3,8 +3,8 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ <link href="<c:url value="/css/bootstrap.min.css" />" rel="stylesheet">
 <title>Insert title here</title>
-<%@ include file="../include/header.jsp" %>
 <style>
 	/* iframe 스타일 설정 */
 	iframe {

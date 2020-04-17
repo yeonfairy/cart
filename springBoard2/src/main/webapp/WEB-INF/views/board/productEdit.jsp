@@ -5,6 +5,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>상품 상세/삭제</title>
 <%@ include file="../include/header.jsp" %>
+ <link href="<c:url value="/css/bootstrap.min.css" />" rel="stylesheet">
 <script>
 	$(document).ready(function(){
 		$("#editBtn").click(function(){

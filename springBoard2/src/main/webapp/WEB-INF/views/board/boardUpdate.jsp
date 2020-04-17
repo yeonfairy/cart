@@ -28,7 +28,7 @@
 }
 </style>
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+ <link href="<c:url value="/css/bootstrap.min.css" />" rel="stylesheet">
 <script type="text/javascript">
 	function fn_fileDown(boardNo){
 		var formObj = $("form[name='readForm']");

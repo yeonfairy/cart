@@ -5,6 +5,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>상품 상세정보</title>
 <%@ include file="../include/header.jsp" %>
+ <link href="<c:url value="/css/bootstrap.min.css" />" rel="stylesheet">
 </head>
 <body>
 <%@ include file="../include/menu.jsp" %>

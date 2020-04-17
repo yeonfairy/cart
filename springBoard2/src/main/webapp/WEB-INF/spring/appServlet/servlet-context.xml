@@ -14,7 +14,7 @@
 	<!-- 리소스 설정 -->
 	<!-- mapping : 가상 경로(상대경로), location : 리소스가 실제로 저장된 경로 -->
 	<!-- Handles HTTP GET requests for /resources/** by efficiently serving up static resources in the ${webappRoot}/resources directory -->
-	<resources mapping="/resources/**" location="/resources/" />
+	<resources mapping="/**" location="/resources/" />
  	<resources mapping="/smarteditor/**" location="/smarteditor/" />
  	<resources mapping="/summernote/**" location="/summernote/" />
 	<resources mapping="/include/**" location="/WEB-INF/views/include/"/>
